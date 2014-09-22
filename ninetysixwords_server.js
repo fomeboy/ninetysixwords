@@ -80,7 +80,7 @@ setInterval(function () {
             console.log('Error: ' + (error.code ? error.code + ' ' + error.message : error.message));
         }
 
-        if (result.statuses[0]) {
+        if (result && result.statuses[0]) {
 
             tweet_text = result.statuses[0].text;
 
