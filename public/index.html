@@ -1,0 +1,29 @@
+<!doctype html>
+
+<html>
+<head>
+    <title> ninety six words 4</title>
+
+    <p><canvas id="canvas1" data-processing-sources="ninetysixwords.pde" style="position:fixed; top:0; left:0; width: 100%; height: 100%;"></canvas></p>
+  
+    <script src="js/jq/jquery-1.11.0.js"></script>
+    <script src="https://cdn.socket.io/socket.io-1.1.0.js"></script>
+    <script src="js/processing.js"></script>
+    <script src="js/ninetysixwords.js"></script>
+      
+</head>
+
+<body>
+
+     <script>
+        jQuery(document).ready( function () {
+            ninetysixwords.feedSketch();
+            ninetysixwords.socket_listen();
+         });
+        
+    </script>
+
+</body>
+
+</html>
+  
