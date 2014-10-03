@@ -12,8 +12,8 @@ String title = "recognize love and hate is born...";
 String autorT = "web development";
 String autorN = "Fernando Pires";
 String musicT = "music";
-String musicN = "Tomuto Suda";
-String contact = "info@gmail.com";
+String musicN = "Nobuto Suda";
+String contact = "fomeboy@yahoo.com";
 float alphaV;
 
 void setup()
@@ -194,14 +194,15 @@ void draw()
 {
    if(frameCount < 1000)
    { 
-     if(frameCount < 600)
-       alphaV = map(frameCount,1,600,0,255);
+     if(frameCount < 500)
+       alphaV = map(frameCount,1,500,0,255);
      else
-       alphaV = map(frameCount,600,1000,255,0);
+       alphaV = map(frameCount,500,1000,255,0);
+       
      background(177,210,217);
      fill(0,0,0,alphaV);
      textAlign(CENTER);
-     textFont(myFont,14);
+     textFont(myFont,16);
      text(title,width/2 ,height/3); 
      textSize(36); 
      text("*",width/2 ,height/2); 

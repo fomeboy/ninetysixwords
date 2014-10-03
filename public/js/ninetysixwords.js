@@ -5,7 +5,7 @@ var ninetysixwords = ninetysixwords || {};
 ninetysixwords = (function () {
     "use strict";
     
-    var feedSketch, socket_listen;
+    var feedSketch, socket_listen, music_init;
        
 
     feedSketch = function () {
@@ -31,12 +31,11 @@ ninetysixwords = (function () {
             socket = io.connect('http://localhost:3000/');
 
         socket.on('tweet', function (data) {
-            //alert(data.tweet_text);
-            //parsed_jason = JSON.parse(data);
             Processing.getInstanceById('canvas1').injectFlake(data.tweet_text, data.tweet_type);
         });
     
     };
+    
 
     return { feedSketch: feedSketch,
              socket_listen: socket_listen};

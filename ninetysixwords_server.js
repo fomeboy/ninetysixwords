@@ -21,48 +21,6 @@ io.on('connection', function (socket) {
 
 
 
-////TWITTR API CALL - STREAM
-//var twitterStreamClient = new twitter.StreamClient(
-//    env.twitter_consumer_key,
-//    env.twitter_consumer_secret,
-//    env.twitter_access_token_key,
-//    env.twitter_access_token_secret
-//);
-//
-//var tweet_text, tweet_type;
-//
-//twitterStreamClient.on('close', function () {
-//    console.log('Connection closed.');
-//});
-//twitterStreamClient.on('end', function () {
-//    console.log('End of Line.');
-//});
-//twitterStreamClient.on('error', function (error) {
-//    console.log('Error: ' + (error.code ? error.code + ' ' + error.message : error.message));
-//});
-//
-//twitterStreamClient.on('tweet', function (tweet) {
-//    
-//    if (tweet.text.search(/love/i) === -1) {
-//        tweet_type = 'hate';
-//    } else {
-//        tweet_type = 'love';
-//    }
-//
-//
-//    if (tweet.text.search(/\n/i) === -1) {
-//
-//        io.emit(JSON.stringify({tweet_type: tweet_type, tweet_text: tweet.text}));
-//        //console.log( "{\"tweet_type\" : " +  tweet_type + " , \"tweet_text\" : " + tweet.text + "}");
-//        //console.log(tweet.created_at);
-//
-//    }
-//    
-//});
-//
-//twitterStreamClient.start(['i hate', 'i love']);
-
-
 //TWITTR API CALL - SEARCH
 var twitterSearchClient = new twitter.SearchClient(
     env.twitter_consumer_key,
